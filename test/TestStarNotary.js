@@ -92,8 +92,8 @@ it('lets a user transfer a star', async() => {
     // 3. Verify the star owner changed.
 });
 
-it('lookUptokenIdToStarInfo test', async() => {
+it('lookUpTokenIdToStarInfo test', async() => {
     // 1. create a Star with different tokenId
-    // 2. Call your method lookUptokenIdToStarInfo
+    // 2. Call your method lookUpTokenIdToStarInfo
     // 3. Verify if you Star name is the same
 });
