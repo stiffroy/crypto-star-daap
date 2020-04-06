@@ -14,8 +14,8 @@ const App = {
       const networkId = await web3.eth.net.getId();
       const deployedNetwork = starNotaryArtifact.networks[networkId];
       this.meta = new web3.eth.Contract(
-        starNotaryArtifact.abi,
-        deployedNetwork.address,
+          starNotaryArtifact.abi,
+          deployedNetwork.address,
       );
 
       // get accounts
@@ -43,7 +43,6 @@ const App = {
   lookUp: async function (){
     
   }
-
 };
 
 window.App = App;
