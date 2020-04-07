@@ -25,3 +25,16 @@ Web3.js v1.2.1
 Github project URL: [https://github.com/stiffroy/crypto-star-daap](https://github.com/stiffroy/crypto-star-daap)
 
 _Note_: Builds are not a part of the git files, so you have to re-compile and migrate the contracts .
+
+## How to run
+
+To run the project effectively, one should do the following
+1. Clone the repository to his local machine
+2. Check node is installed by typing ```node -v``` in the terminal. (Please note, to run the truffle tests properly, you need to have node version < 11)
+3. Check that truffle is installed by typing ```truffle -v ``` otherwise install it with ```npm install -g truffle``` in the terminal
+4. Check into the cloned directory by typing ```cd crypto-star-daap``` in the terminal
+5. Compile and migrate the contracts: 
+⋅⋅⋅ either by executing ```truffle compile && truffle migrate --reset```
+... or by going into the truffle console by typing ```truffle develop``` and then executing ```compile``` and ```migrate --reset```
+6. Now on another terminal, go to the app directory inside the project directory as ```cd app``` and execute ```npm run dev```.
+7. Keep this terminal open and go to the url provided by the previous command (it should be mostly [http://localhost:8080](http://localhost:8080)) to check the Daap
