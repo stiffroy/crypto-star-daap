@@ -78,6 +78,14 @@ contract StarNotary is ERC721 {
         if (msg.sender == ownerOf(_tokenId)) {
             //2. Use the transferFrom(from, to, tokenId); function to transfer the Star
             transferFrom(msg.sender, _to1, _tokenId);
+            // Reply to the review comment:
+            // The difference between the transferFrom() and _transferFrom() functions are:
+            // The first one checks if the from address is owner of the token or approved to transfer the token
+            // and calls the main execution by _transferFrom() method where no more checks are done.
+            // But for safety reasons, I would always try to use the transferFrom() method on the first place whenever
+            // possible. When it is not possible, I would go for the _transferFrom() method as a fallback.
+            // Also, the check I am doing in the if statement is useless as this is again checked inside the
+            // transferFrom() method.
         }
     }
 }
